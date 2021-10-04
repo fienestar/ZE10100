@@ -57,7 +57,7 @@ void* temp_alloc(size_t sz)
 
 void temp_free_all()
 {
-    while (alloc_index--)
+    while (temp_alloc_index--)
         free(temp_alloc_table[temp_alloc_index]);
     temp_alloc_index = 0;
 }
